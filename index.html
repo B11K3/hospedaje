@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel el Fifi</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Hotel el Fifi</h1>
+		<form id="reservation-form">
+			<label for="room-type">Tipo de Habitación:</label>
+			<select id="room-type" name="room-type" onchange="mostrarImagen()">
+				<option value="normal">Normal - $150/noche</option>
+				<option value="premium">Premium - $250/noche</option>
+			</select>
+
+			<label for="nights">Ingresa las noches que te quedaras:</label>
+			<input type="number" id="nights" name="nights" min="1" required>
+
+			<label for="name">Nombre:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Correo:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="guests">Cantidad de adultos (maximo de 4):
+			</label>
+			<input type="number" id="guests" name="guests" min="1" max="4" required>
+
+			<div id="child-inputs" class="hidden">
+				<label for="children">Número de Niños:</label>
+				<input type="number" id="children" name="children" min="0" max="3">
+			</div>
+			
+			<hr>
+			<label for="adulto">Adulto</label>
+			<input type="radio" id="adult" name="age" value="adult" checked>
+			<hr>
+
+			<button type="submit" id="submit-button">Reservar</button>
+		</form>
+	</div>
+
+	<script src="js/js.js"></script>
+</body>
+</html>
